@@ -1,41 +1,9 @@
 README
 --------
 
-INSTALL CLIENT PROGRAM
---------
-1) cd into your WEBROOT
-2) mv pubnub-frontend-test.tar.gz WEBROOT
-3) untar the application: `tar -xvf pubnub-frontend-test.tar.gz`
-4) To run the client program copy the frontend test folder into your webroot navigate to <WEBROOT>/pubnub-frontend-test/task-list-client.html
 
 GOAL
 --------
 Create a task list using only client side technologies (JavaScript,CSS,HTML,PubNub)
 
-TASKS
---------
-1) Review the existing Backbone javascript
-2) Add or remove functionality as you see fit
-    1) Use whatever frameworks you like (Angular,Ember,Backbone, ... ) or None 
-3) Add your own css
-    1) Assume you have full CSS3 and HTML5 browser support
-    2) Use whatever frameworks you like (Bootstrap,Skeleton, ... ) or None 
 
-WHAT WE ARE LOOKING FOR
----------
-1) UX considerations
-    1) Positioning of elements on the page
-    2) How easy it is to read, add and remove tasks?
-2) UI considerations
-    1) How does the page look?
-    2) Purposeful/Effective CSS transitions
-3) Mobile/media scaling
-    1) How does the program look on various media's?
-4) Functionality
-    1) Does the program work?
-    2) Did you add some novel functionality to the program?
-
-Submission
-----------
-Please submit your program 24 hours before your interview to give us time to review it
-Submission and questions to jordan@pubnub.com or bhagat@pubnub.com
