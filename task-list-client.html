@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PubNub TaskList</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/pubnub.css" rel="stylesheet" />
+    </head>
+    <body> 
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand " href="#/">
+                        <img src="css/Images/people.png" alt="logo"> Todo Manager
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+         <div class="container-fluid" >
+                <div class="row">
+                    <div id="tasks-container" class="span12"></div>
+                </div>
+        </div>
+
+        <div id="footer">
+            <div class="navbar navbar-fixed-bottom">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <footer>
+                            <div class="row-fluid">
+                                <div class="span4">
+                                    Pubnub / todo
+                                </div>
+                            </div>
+                       </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="lib/jquery-latest.min.js"></script>
+        <script src="lib/underscore-min.js"></script>
+        <script src="lib/backbone-min.js"></script>
+        <script src="lib/pubnub-3.5.3.1.min.js" ></script>
+        <script src="js/pubnub.js" ></script>
+
+        <script id="tasks-view-template" type="text/template">
+            <div id="tasks-wrapper" class="span12">
+                <form id="new-task" class="row form-inline" method="POST" action="">
+        <fieldset>
+            <div class="form-group">
+                <input type="text" required="" class="form-control" placeholder="add a new task" name="name">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="assign this task" name="assign">                
+                    <input class="btn btn-primary" type="submit" value="add" />
+            </div>
+        </fieldset>
+                        </form>
+                <div id="tasks"></div>
+            </div>
+        </script> 
+        <script id="tasks-template" type="text/template">
+            <div id="tasks">
+                 <% tasks.forEach(function(task,i){ %>
+                    <%= _.template(TaskTpl,{'task':task,'id':i}) %>
+                 <% }); %>
+            </div>
+        </script>
+        <script id="task-template" type="text/template">
+            <div data-id="<%= id %>" class="indent task">
+                <div class="row cardContainer">
+                    <div class="span6 card">
+                        <button data-id="<%= id %>" href="#" class="btn-large close cardClose remove" title="click to delete item"> &times; </button>
+                        <div class="cardHeader">
+                            <span class="created">added on <%= task.get('created') %></span>
+                        </div>
+                        <span class="cardBody name"><%= task.get('assign') %></span>
+                        <span class="cardBody name">- <%= task.get('name') %></span>
+                    </div>
+                </div>
+            </div>
+        </script>
+    </body>
+</html>

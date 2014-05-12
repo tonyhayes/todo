@@ -1,0 +1,106 @@
+﻿body {
+    padding: 10px;
+}
+
+
+.card {
+    background-color:#efefef;
+    border: 1px solid black;
+    min-height:75px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.cardHeader {
+    background-color: #006dcc;
+    font-size:10px;
+    color:white;
+    padding:5px;
+}
+
+.cardClose {
+    color: white;
+    font-weight:bold;
+    margin-right:5px;
+}
+
+.cardContainer {
+    width:90%;
+    margin-top:-15px;
+    margin-bottom: 15px;
+
+}
+
+.cardBody {
+    padding-left: 5px;
+    word-wrap:break-word;
+}
+
+
+footer {
+    margin-top:10px;
+    margin-left:10px;
+    font-weight: bold;
+}
+
+
+/* Bootstrap overrides */
+.navbar-inner {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.navbar .nav {
+    margin-left:50px;
+    margin-top:15px;
+}
+
+.close {
+    opacity: 1.0;
+}
+
+
+a {
+  cursor: pointer;
+}
+
+
+.indent {
+    margin-left:20px;
+}
+@media (max-width: 768px) and (min-width: 0px) {
+#new-task input[name="name"] {
+    margin-top:100px;
+    width: 278px;
+    font-size: 12px;
+    line-height: 1.0em;
+    padding: 6px;
+}
+
+
+
+}
+@media (max-width: 922px) and (min-width: 768px) {
+#new-task input[name="name"] {
+    margin-top:100px;
+    width: 400px;
+    font-size: 20px;
+    line-height: 1.2em;
+    padding: 6px;
+}
+
+
+
+
+}
+@media (min-width: 922px) {
+#new-task input[name="name"] {
+    margin-top:100px;
+    width: 466px;
+    font-size: 24px;
+    line-height: 1.4em;
+    padding: 6px;
+}
+
+}
+
